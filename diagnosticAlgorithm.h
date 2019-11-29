@@ -9,6 +9,5 @@
 #include "resources/cPatient.h"
 
 state_t answer();
-void diagnose();
 
 #endif //KARUSAMPI_DIAGNOSTICALGORITHM_H

@@ -5,8 +5,6 @@
 #ifndef KARUSAMPI_CPERSON_H
 #define KARUSAMPI_CPERSON_H
 
-#include <utility>
-
 #include "../types.h"
 
 class cPerson {

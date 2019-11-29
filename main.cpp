@@ -13,9 +13,9 @@ int main() {
     bpm_t hR;
     greeting(n, a, m, h, sP, dP, hR);
     cPatient cP(n, a, m, h, sP, dP, hR);
-    diagnostic(cP);
-    cPatient* pCP = &cP;
-    cReport cR(pCP);
-    // menu(pCP);
+    // diagnostic(cP);
+    // cPatient* pCP = &cP;
+    // cReport cR(pCP);
+    // menu(cR);
     return 0;
 }

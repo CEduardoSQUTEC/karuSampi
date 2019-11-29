@@ -20,7 +20,7 @@ public:
 
     void detectDisease();
 
-    symptom_list_t &getSymptoms() { return symptoms; }
+    symptom_list_t & getSymptoms() { return symptoms; }
 
     text_t getName() { return name; }
 };
