@@ -18,24 +18,24 @@ void menu(cReport &cR) {
     char in;
     cout << "\nOK, hemos terminado tenemos las siguientes opciones para ti: \n";
     cout << "0: Imprimir tu reporte en la pantalla?\n";
-    cout << "1: Imprimir tu reporte en un archivo?\n";
-    cout << "2: Eres otra persona deseas que te hagos un diagnostico?\n";
+    /* cout << "1: Imprimir tu reporte en un archivo?\n";
+       cout << "2: Eres otra persona deseas que te hagos un diagnostico?\n"; */
     cout << "3: Salir\n";
     cout << "Respuesta: ";
     cin >> in;
-/*
+
     if (in == '0') {
         cR.print(cout);
         menu(cR);
-    } else if (in == '1') {
-        // ofstream fileReport;
-        // fileReport.open("Reporte.txt");
-        // cR.print(fileReport);
-        menu(cR);
-    } else if (in == '2') {
-        // greeting();
+        /* } else if (in == '1') {
+             // ofstream fileReport;
+             // fileReport.open("Reporte.txt");
+             // cR.print(fileReport);
+             menu(cR);
+         } else if (in == '2') {
+             greeting(); */
     } else {
         cout << "\nRespuesta invalida\n";
-        menu();
-    }*/
+        menu(cR);
+    }
 }

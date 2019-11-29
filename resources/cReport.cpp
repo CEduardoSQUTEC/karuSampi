@@ -5,8 +5,7 @@
 #include "cReport.h"
 
 void cReport::findDoctor() {
-    text_t doctor = "otorrinolaringolo";
-    cDoctor cD (doctor);
+    cDoctor cD ("Otorrinolaringolo");
     pDoctor = &cD;
 }
 

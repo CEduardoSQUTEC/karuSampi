@@ -10,7 +10,7 @@
 
 class cDoctor: public cPerson{
 public:
-    explicit cDoctor(text_t &n): cPerson(n){}
+    explicit cDoctor(const text_t &n): cPerson(n){}
 };
 
 /* ostream& operator<<(ostream &os, cDoctor& cD){

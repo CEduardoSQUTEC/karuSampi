@@ -23,7 +23,7 @@ public:
             name(std::move(n)), age(a), mass(m), height(m), systolicPressure(sP), diastolicPressure(dP), heartRate(hR),
             imc(m / h * h) {}
 
-    cPerson(text_t &n) : name(n) {}
+    cPerson(const text_t &n) : name(n) {}
 
     text_t getName() { return name; }
 
