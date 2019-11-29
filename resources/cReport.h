@@ -16,7 +16,7 @@ class cReport {
     void findDoctor();
     void findMedicine();
 public:
-    cReport(cPatient* pP): pPatient(pP), pDoctor(nullptr), pMedicine(nullptr) {}
+    cReport(cPatient* pP): pPatient(pP), pDoctor(nullptr), pMedicine(nullptr) {findDoctor(); findMedicine();}
     void print(ostream &o);
 };
 

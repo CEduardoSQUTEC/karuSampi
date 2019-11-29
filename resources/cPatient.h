@@ -11,23 +11,14 @@
 
 class cPatient : public cPerson {
 private:
-    text_t name;
-    gender_t gender;
-    age_t age;
-    kilogram_t mass;
-    meter_t height;
-    mmhg_t systolicPressure;
-    mmhg_t diastolicPressure;
-    bpm_t heartRate;
-    imc_t imc;
     cDisease disease;
 public:
-    cPatient(text_t &n, gender_t &g, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) :
-            cPerson(n, g, a, m, h, sP, dP, hR) {}
+    cPatient(text_t &n, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) :
+            cPerson(n, a, m, h, sP, dP, hR) {}
 
     text_t getDiseaseName() { return disease.getName(); }
 
-    symptom_list_t& getDiseaseSymptoms(){return disease.getSymptoms();}
+    symptom_list_t &getDiseaseSymptoms() { return disease.getSymptoms(); }
 
     friend void earlyAppearance(cPatient &cP);
 
@@ -54,6 +45,8 @@ public:
     friend void sneezing(cPatient &cP);
 
     friend void muscularPain(cPatient &cP);
+
+    friend void diagnostic(cPatient &cP);
 };
 
 #endif //KARUSAMPI_CPATIENT_H

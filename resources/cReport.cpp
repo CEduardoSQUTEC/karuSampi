@@ -19,7 +19,7 @@ void cReport::print(ostream &o) {
     o << "\nPaciente: " << pPatient->getName() << '\n';
 
     o << "\nSignos y datos:\n";
-    o << "Sexo: " << pPatient->getGender() << '\n';
+    //  o << "Sexo: " << pPatient->getGender() << '\n';
     o << "Edad: " << pPatient->getAge() << '\n';
     o << "Peso: " << pPatient->getMass() << '\n';
     o << "Altura: " << pPatient->getHeight() << '\n';

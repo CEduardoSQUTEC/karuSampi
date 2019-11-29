@@ -147,3 +147,8 @@ void muscularPain(cPatient &cP) {
     } else sneezing(cP);
 }
 
+void diagnostic(cPatient &cP){
+    cout<<"Ahora, ¿puedes contarme sobre tus síntomas," << cP.getName() <<"?";
+    soreThroat(cP);
+}
+
