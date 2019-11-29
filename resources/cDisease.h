@@ -14,7 +14,7 @@ class cDisease {
     text_t name;
     symptom_list_t symptoms;
 public:
-    cDisease() : name("Unknow") {}
+    cDisease() : name("Unknown") {}
 
     void addSymptom(cSymptom &cS) { symptoms.emplace_back(cS); }
 
