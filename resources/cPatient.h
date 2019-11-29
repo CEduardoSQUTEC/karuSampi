@@ -11,14 +11,14 @@
 
 class cPatient : public cPerson {
 private:
-    cDisease disease;
+    cDisease disease();
 public:
     cPatient(text_t &n, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) :
             cPerson(n, a, m, h, sP, dP, hR) {}
 
-    text_t getDiseaseName() { return disease.getName(); }
+    text_t getDiseaseName() { return disease().getName(); }
 
-    symptom_list_t &getDiseaseSymptoms() { return disease.getSymptoms(); }
+    symptom_list_t getDiseaseSymptoms() { return disease().getSymptoms(); }
 
 
     friend void constantSneezing(cPatient &cP);

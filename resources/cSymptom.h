@@ -15,6 +15,7 @@ public:
     void setPresence(state_t p) {presence = p;}
 
     text_t getName() { return name; }
+    state_t getPresence() {return presence;}
 };
 
 /* ostream &operator<<(ostream &os,cSymptom &cS) {

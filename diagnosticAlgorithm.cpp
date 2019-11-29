@@ -33,14 +33,19 @@ cSymptom fever_obj("Fever", false);
 cSymptom fatigue_obj("Fatigue",false);
 cSymptom eyeIrritation_obj("Eye Irritation", false);
 cSymptom sneezing_obj("Sneezing",false);
-cSymptom muscularPain_onj("Muscular Pain", false);
+cSymptom muscularPain_obj("Muscular Pain", false);
+
+
+symptom_list_t Flu = {fever_obj, soreThroat_obj, headache_obj, extremeTiredness_obj, fatigue_obj, muscularPain_obj, earlyAppearance_obj, coughing_obj, nasalCongestion_obj};
+symptom_list_t Cold = {soreThroat_obj, headache_obj,sneezing_obj, nasalCongestion_obj, thickMucus_obj};
+symptom_list_t Allergies = {nasalCongestion_obj, sneezing_obj, constantSneezing_obj, eyeIrritation_obj};
+
 
 void earlyAppearance(cPatient &cP) {
-    cout << "¿Sus estornudos se manifestaron de manera rapida?" << endl;
+    cout << "¿Sus malestares se manifestaron de manera rapida?" << endl;
     state_t presence = answer();
     if (presence) {
         earlyAppearance_obj.setPresence(true);
-        cP.disease.addSymptom(earlyAppearance_obj);
     }
 }
 
@@ -49,7 +54,6 @@ void constantSneezing(cPatient &cP) {
     state_t presence = answer();
     if (presence) {
         constantSneezing_obj.setPresence(true);
-        cP.disease.addSymptom(constantSneezing_obj);
     } else earlyAppearance(cP);
 }
 
@@ -147,12 +151,41 @@ void muscularPain(cPatient &cP) {
     cout << "¿Presenta dolores musculares?" << endl;
     state_t presence = answer();
     if (presence) {
-        muscularPain_onj.setPresence(true);
+        muscularPain_obj.setPresence(true);
     } else sneezing(cP);
+}
+
+
+void diagnose(){
+    int counterCold = 0;
+    int counterFlu = 0;
+    int counterAllergies = 0;
+    for (unsigned int i = 0; i < Cold.size(); i++){
+        if (Cold[i].getPresence() == 1)
+            counterCold++;
+    }
+    for (unsigned int i = 0; i < Flu.size(); i++){
+        if (Flu[i].getPresence() == 1)
+            counterFlu++;
+    }
+    for (unsigned int i = 0; i < Allergies.size(); i++){
+        if (Allergies[i].getPresence() == 1)
+            counterAllergies++;
+    }
+
+    if (counterCold > counterAllergies && counterCold > counterFlu)
+        cDisease patientDisease("Resfrio");
+    if (counterAllergies > counterCold && counterFlu)
+        cDisease patientDisease("Alergia");
+    if (counterFlu > counterAllergies && counterFlu > counterCold)
+        cDisease patientDisease("Gripe");
+    else
+        cDisease patientDisease("Resfrio");
 }
 
 void diagnostic(cPatient &cP){
     cout<<"Ahora, ¿puedes contarme sobre tus síntomas," << cP.getName() <<"?";
     soreThroat(cP);
+    diagnose();
+    cout << "Usted ha sido diagnosticado con: " << patientDisease.getName() << endl;
 }
-

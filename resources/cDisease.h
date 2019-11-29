@@ -14,7 +14,8 @@ class cDisease {
     text_t name;
     symptom_list_t symptoms;
 public:
-    cDisease() : name("Unknown") {}
+    cDisease();
+    explicit cDisease(const text_t& name) : name("Unknown") {}
 
     void addSymptom(cSymptom &cS) { symptoms.emplace_back(cS); }
 

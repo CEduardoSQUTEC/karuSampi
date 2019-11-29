@@ -1,6 +1,3 @@
-//
-// Created by eduar on 29-Nov-19.
-//
 #include "interface.h"
 
 void greeting(text_t &n, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) {
@@ -14,7 +11,7 @@ void greeting(text_t &n, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t
     cin >> sP >> dP;
     cout << "\nY última pregunta, nuevamente el asistente ingrese el pulso cardiaco. ¡Tranquilo! Ya casi terminamos.\n";
     cin >> hR;
-    cout << "\n¡Increíble! Muchas gracias por responder. Voy a procesar alguno de tus datos.\n";
+    cout << "\n¡Increíble! Muchas gracias por responder. Voy a procesar algunos de tus datos.\n";
 }
 
 void menu(cReport &cR) {
