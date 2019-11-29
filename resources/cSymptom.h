@@ -11,7 +11,14 @@ class cSymptom {
     text_t name;
     state_t presence;
 public:
-    cSymptom(const text_t &n, state_t &p): name(n), presence(p) {}
+    cSymptom(const text_t &n, state_t &p) : name(n), presence(p) {}
+
+    text_t getName() { return name; }
 };
+
+/* ostream &operator<<(ostream &os,cSymptom &cS) {
+    os << cS.getName();
+    return os;
+} */
 
 #endif //KARUSAMPI_CSYMPTOM_H

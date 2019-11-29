@@ -28,5 +28,7 @@ void cReport::print(ostream &o) {
     o << "\nEnfermedad: " << pPatient->getDiseaseName() << '\n';
 
     o << "\nSintomas: ";
-    for (pPatient->disease)
+    for (auto &cS: pPatient->getDiseaseSymptoms()){
+        o << cS.getName() << ' ';
+    }
 }
