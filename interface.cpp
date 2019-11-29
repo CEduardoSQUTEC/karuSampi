@@ -2,7 +2,7 @@
 
 void greeting(text_t &n, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) {
     cout << "\n¡Hola! Mi nombre es Karu, tu asistente médico. ¿Podrías decirme tu nombre?\n";
-    cin >> n;
+    getline(cin,n);
     cout << "\nMuy bonito nombre." << "¿Cuántos años tienes?\n";
     cin >> a;
     cout << "\n¿Cuánto pesas y cuánto mides? ¡Sin mentir!\n";
