@@ -20,8 +20,8 @@ void cDisease::detectDisease() {
 
         size_t maxCont = max(max(contFlu, contCold), contAll);
         if ((maxCont == contAll && maxCont == contCold) || (maxCont == contAll == contFlu));
-        else if (maxCont == contAll) this->name = "Allergies";
-        else if (maxCont == contCold) this->name = "Cold";
-        else if (maxCont == contFlu) this->name = "Flu";
+        else if (maxCont == contAll) this->name = "Alergia";
+        else if (maxCont == contCold) this->name = "Resfriado";
+        else if (maxCont == contFlu) this->name = "Gripe";
     }
 }
