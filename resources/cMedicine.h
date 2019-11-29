@@ -11,7 +11,9 @@ class cMedicine {
     text_t name;
     dose_t dose;
 public:
-    cMedicine(text_t &n, dose_t &d): name(n), dose(d) {}
+    cMedicine(const text_t &n, dose_t d) : name(n), dose(d) {}
+
+    text_t getName() { return name; }
 };
 
 #endif //KARUSAMPI_CMEDICINE_H

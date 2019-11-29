@@ -5,6 +5,8 @@
 #ifndef KARUSAMPI_CPERSON_H
 #define KARUSAMPI_CPERSON_H
 
+#include <utility>
+
 #include "../types.h"
 
 class cPerson {
@@ -20,10 +22,29 @@ protected:
     imc_t imc;
 public:
     cPerson(text_t &n, gender_t &g, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) :
-            name(n), age(a), gender(g), mass(m), height(m), systolicPressure(sP), diastolicPressure(dP), heartRate(hR),
+            name(std::move(n)), age(a), gender(g), mass(m), height(m), systolicPressure(sP), diastolicPressure(dP), heartRate(hR),
             imc(m / h * h) {}
 
     cPerson(text_t &n) : name(n) {}
+
+    text_t getName() { return name; }
+
+    gender_t getGender() { return gender; }
+
+    age_t getAge() { return age; }
+
+    kilogram_t getMass() { return mass; }
+
+    meter_t getHeight() { return height; }
+
+    mmhg_t getSystolicPressure() { return systolicPressure; }
+
+    mmhg_t getDiastolicPressure() { return diastolicPressure; }
+
+    bpm_t getHeartRate() { return heartRate; }
+
+    imc_t getImc() { return imc; }
+
 };
 
 

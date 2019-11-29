@@ -25,24 +25,6 @@ public:
     cPatient(text_t &n, gender_t &g, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) :
             cPerson(n, g, a, m, h, sP, dP, hR) {}
 
-    text_t getName() { return name; }
-
-    gender_t getGender() { return gender; }
-
-    age_t getAge() { return age; }
-
-    kilogram_t getMass() { return mass; }
-
-    meter_t getHeight() { return height; }
-
-    mmhg_t getSystolicPressure() { return systolicPressure; }
-
-    mmhg_t getDiastolicPressure() { return diastolicPressure; }
-
-    bpm_t getHeartRate() { return heartRate; }
-
-    imc_t getImc() { return imc; }
-
     text_t getDiseaseName() { return disease.getName(); }
 
     symptom_list_t& getDiseaseSymptoms(){return disease.getSymptoms();}

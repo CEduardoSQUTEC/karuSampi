@@ -5,11 +5,14 @@
 #include "cReport.h"
 
 void cReport::findDoctor() {
-
+    text_t doctor = "otorrinolaringolo";
+    cDoctor cD (doctor);
+    pDoctor = &cD;
 }
 
 void cReport::findMedicine() {
-
+    cMedicine cM ("Ninguna", 0);
+    pMedicine = &cM;
 }
 
 void cReport::print(ostream &o) {
@@ -28,7 +31,11 @@ void cReport::print(ostream &o) {
     o << "\nEnfermedad: " << pPatient->getDiseaseName() << '\n';
 
     o << "\nSintomas: ";
-    for (auto &cS: pPatient->getDiseaseSymptoms()){
-        o << cS.getName() << ' ';
-    }
+    for (auto &cS: pPatient->getDiseaseSymptoms()) o << cS.getName() << '\n';
+    o << '\n';
+
+    o << "\nDoctor: " << pDoctor->getName() << '\n';
+
+    o << "\nMedicina: " << pMedicine->getName() << '\n';
+
 }

@@ -13,4 +13,9 @@ public:
     explicit cDoctor(text_t &n): cPerson(n){}
 };
 
+/* ostream& operator<<(ostream &os, cDoctor& cD){
+    os << cD.getName();
+    return os;
+} */
+
 #endif //KARUSAMPI_CDOCTOR_H
