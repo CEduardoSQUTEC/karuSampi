@@ -11,3 +11,7 @@ void cReport::findDoctor() {
 void cReport::findMedicine() {
 
 }
+
+void cReport::print() {
+
+}
