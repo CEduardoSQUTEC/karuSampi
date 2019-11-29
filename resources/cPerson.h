@@ -41,7 +41,7 @@ public:
             name(n), age(a), gender(g), mass(m), height(m), systolicPressure(sP), diastolicPressure(dP), heartRate(hR), \
             imc(m / h * h) {}
 
-    \
+    cPerson(text_t &n) : name(n) {}
 
 };
 

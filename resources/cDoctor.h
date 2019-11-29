@@ -6,11 +6,11 @@
 #define KARUSAMPI_CDOCTOR_H
 
 #include "../types.h"
+#include "cPerson.h"
 
-class cDoctor {
-    text_t name;
+class cDoctor: public cPerson{
 public:
-    explicit cDoctor(text_t &n): name(n){}
+    explicit cDoctor(text_t &n): cPerson(n){}
 };
 
 #endif //KARUSAMPI_CDOCTOR_H
