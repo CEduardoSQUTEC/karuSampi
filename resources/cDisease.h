@@ -14,14 +14,15 @@ class cDisease {
     text_t name;
     symptom_list_t symptoms;
 public:
-    cDisease();
-    explicit cDisease(const text_t& name) : name("Unknown") {}
+    cDisease() : name("Unknow") {}
 
     void addSymptom(cSymptom &cS) { symptoms.emplace_back(cS); }
 
     void detectDisease();
-    text_t getName() {return name;}
-    symptom_list_t &getSymptoms() {return symptoms;}
+
+    symptom_list_t &getSymptoms() { return symptoms; }
+
+    text_t getName() { return name; }
 };
 
 #endif //KARUSAMPI_CDISEASE_H
