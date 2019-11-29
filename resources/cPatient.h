@@ -20,7 +20,6 @@ public:
 
     symptom_list_t &getDiseaseSymptoms() { return disease.getSymptoms(); }
 
-    friend void earlyAppearance(cPatient &cP);
 
     friend void constantSneezing(cPatient &cP);
 
@@ -47,6 +46,8 @@ public:
     friend void muscularPain(cPatient &cP);
 
     friend void diagnostic(cPatient &cP);
+
+    friend void earlyAppearance(cPatient &cP);
 };
 
 #endif //KARUSAMPI_CPATIENT_H

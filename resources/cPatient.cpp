@@ -1,5 +1,4 @@
-//
-// Created by eduar on 28-Nov-19.
-//
-
 #include "cPatient.h"
+#include "cDisease.h"
+#include <vector>
+

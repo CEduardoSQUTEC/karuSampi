@@ -3,7 +3,10 @@
 //
 
 #include "cDisease.h"
+#include "cSymptom.h"
+#include "cPatient.h"
 
 void cDisease::detectDisease() {
 
 }
+
