@@ -146,3 +146,4 @@ void muscularPain(cPatient &cP) {
         cP.disease.addSymptom(objCS);
     } else sneezing(cP);
 }
+

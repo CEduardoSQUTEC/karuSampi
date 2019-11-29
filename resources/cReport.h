@@ -17,7 +17,7 @@ class cReport {
     void findMedicine();
 public:
     cReport(cPatient* pP): pPatient(pP), pDoctor(nullptr), pMedicine(nullptr) {}
-    void print();
+    void print(ostream &o);
 };
 
 #endif //KARUSAMPI_CREPORT_H

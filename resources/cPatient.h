@@ -23,20 +23,52 @@ private:
     cDisease disease;
 public:
     cPatient(text_t &n, gender_t &g, age_t &a, kilogram_t &m, meter_t &h, mmhg_t &sP, mmhg_t &dP, bpm_t &hR) :
-             cPerson(n, g, a, m, h, sP, dP, hR){}
+            cPerson(n, g, a, m, h, sP, dP, hR) {}
+
+    text_t getName() {return name;}
+
+    gender_t getGender() {return gender;}
+
+    age_t getAge() {return age;}
+
+    kilogram_t getMass() {return mass;}
+
+    meter_t getHeight() {return height;}
+
+    mmhg_t getSystolicPressure() {return systolicPressure;}
+
+    mmhg_t getDiastolicPressure() {return diastolicPressure;}
+
+    bpm_t getHeartRate() {return heartRate;}
+
+    imc_t getImc() {return imc;}
+
+    text_t getDiseaseName() {return disease.getName();}
 
     friend void earlyAppearance(cPatient &cP);
+
     friend void constantSneezing(cPatient &cP);
+
     friend void soreThroat(cPatient &cP);
+
     friend void headache(cPatient &cP);
+
     friend void nasalCongestion(cPatient &cP);
+
     friend void extremeTiredness(cPatient &cP);
+
     friend void coughing(cPatient &cP);
+
     friend void thickMucus(cPatient &cP);
+
     friend void fever(cPatient &cP);
+
     friend void fatigue(cPatient &cP);
+
     friend void eyeIrritation(cPatient &cP);
+
     friend void sneezing(cPatient &cP);
+
     friend void muscularPain(cPatient &cP);
 };
 

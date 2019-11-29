@@ -19,6 +19,8 @@ public:
     void addSymptom(cSymptom &cS) { symptoms.emplace_back(cS); }
 
     void detectDisease();
+
+    text_t getName() { return name; }
 };
 
 #endif //KARUSAMPI_CDISEASE_H
